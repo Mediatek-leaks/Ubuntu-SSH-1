@@ -1,4 +1,4 @@
-name: Ubuntu_Server
+name: mac
 on: 
   workflow_dispatch:
 defaults:
@@ -14,6 +14,6 @@ jobs:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
     - uses: actions/checkout@v2
-    - run: source ubuntu-run.sh
+    - run: ls
     - name: Setup tmate session
-      uses: mxschmitt/action-tmate@master
+      uses: mxschmitt/action-tmate@v2
